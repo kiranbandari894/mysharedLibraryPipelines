@@ -1,6 +1,6 @@
 // for downloading repositories from github
 def getGit(repo){
-   git ${repo}
+   git "${repo}"
 }
 
 // for building .war
@@ -15,7 +15,7 @@ def DeployApp(workspace,ip,deploytoappname){
 // for testing 
 def Test(repo,workspace,jar_name){
   git  ${repo}
-  sh 'java -jar /var/jenkins_home/workspace/${workspace}/${jar_name}.jar'
+  sh "java -jar /var/jenkins_home/workspace/${workspace}/${jar_name}.jar"
 }
 
 
