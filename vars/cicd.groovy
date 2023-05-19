@@ -8,8 +8,8 @@ def buildApp(){
    sh "maven package"
 }
 // for Deploying build to servers
-def DeployApp(workspace,ip,deploytoappname){
-  sh "scp /var/jenkins_home/workspace/${workspace}/webapp/target/webapp.war  ubuntu@${ip}:/usr/local/tomee/webapps/${deploytoappname}.war"
+def DeployApp(workspace,ip,user,deploytoappname){
+   sh "scp /var/jenkins_home/workspace/${workspace}/webapp/target/webapp.war  ${user}@${ip}:/usr/local/tomee/webapps/${deploytoappname}.war"
 }
 
 // for testing 
