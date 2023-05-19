@@ -5,7 +5,7 @@ def getGit(repo){
 
 // for building .war
 def buildApp(){
-   sh "maven package"
+   sh "mvn package"
 }
 // for Deploying build to servers
 def DeployApp(workspace,ip,user,deploytoappname){
