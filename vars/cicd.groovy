@@ -14,7 +14,7 @@ def DeployApp(workspace,ip,deploytoappname){
 
 // for testing 
 def Test(repo,workspace,jar_name){
-  git  ${repo}
+  git  "${repo}"
   sh "java -jar /var/jenkins_home/workspace/${workspace}/${jar_name}.jar"
 }
 
