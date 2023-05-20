@@ -8,8 +8,8 @@ def buildApp(){
    sh "mvn package"
 }
 // for Deploying build to servers
-def DeployApp(workspace,ip,user,deploytoappname){
-   sh "scp /var/jenkins_home/workspace/${workspace}/webapp/target/webapp.war  ${user}@${ip}:/usr/local/tomee/webapps/${deploytoappname}.war"
+def DeployApp(ip,deploytoappname){
+   deploy adapters: [tomcat9(credentialsId: 'd9cb3bc8-87b7-4f0f-9bd5-715451addf26', path: '', url: 'http://${ip}:8080/')], contextPath: '${deploytoappname}', war: '**/*.war'
 }
 
 // for testing 
