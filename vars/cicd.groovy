@@ -18,4 +18,4 @@ def Test(repo,workspace,jar_name){
   sh "java -jar /var/jenkins_home/workspace/${workspace}/${jar_name}.jar"
 }
 
-
+ 
