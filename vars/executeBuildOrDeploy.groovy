@@ -8,7 +8,7 @@ def call(String command){
        stages{
          stage("Build"){
             steps{
-              sh '/usr/bin/mvn --version'
+              sh 'mvn -v'
             } 
           }
        }
