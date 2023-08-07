@@ -5,7 +5,7 @@ def call(String command){
        stages{
          stage("Build"){
             steps{
-              sh 'git --version'
+              sh 'mvn --version'
             } 
           }
        }
