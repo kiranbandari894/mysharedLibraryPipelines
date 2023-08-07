@@ -3,7 +3,7 @@ def call(String command){
      pipeline{
        agent any
        tools {
-         maven 'Maven 3.9.4'
+         maven 'maven'
        }   
        stages{
          stage("Build"){
